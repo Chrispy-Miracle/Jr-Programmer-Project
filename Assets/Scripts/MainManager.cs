@@ -5,8 +5,8 @@ using System.IO;
 
 public class MainManager : MonoBehaviour
 {
-    // make main manager accessible from other scripts
-    public static MainManager Instance;
+    // getter makes main manager readonly to other scripts, private setter allows this script to modify it
+    public static MainManager Instance { get; private set;} // now it is safe from outside world!
 
     public Color teamColor;
 
